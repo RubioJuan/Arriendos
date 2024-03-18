@@ -2,7 +2,9 @@ body{
     background-color: rgba(50, 51, 51, 0.856);
 }
 .titulo{
+    text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #181a19;
 }
 *{
     margin: 0;
@@ -84,11 +86,52 @@ body{
     #menu:checked ~ .navbar{
         display: initial;
     }
+}/* Estilos base para las imágenes */
+.img1,
+.img2,
+.img3,
+.img4 {
+    width: 300px;
+    height: 300px;
 }
-.titulo{
+
+/* Estilos para el contenedor de imágenes */
+.containerImg {
     text-align: center;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
 }
-.containerImg{
-    width: 150px;
-    height: 150px;
+
+/* Estilos para las imágenes al hacer hover */
+.img1:hover,
+.img2:hover,
+.img3:hover,
+.img4:hover {
+    transform: scale(1.05);
+}
+
+/* Media queries para hacerlo responsivo */
+@media screen and (max-width: 768px) {
+    .containerImg {
+        grid-template-columns: 1fr 1fr; /* Cambiamos a dos columnas en pantallas medianas */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .containerImg {
+        grid-template-columns: 1fr; /* Cambiamos a una sola columna en pantallas pequeñas */
+    }
+}
+.banner {
+    display: grid;
+    place-items: center;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%; /* Hace que la imagen ocupe todo el ancho disponible */
+    height: auto; /* Permite que la altura se ajuste automáticamente para mantener la proporción */
 }
