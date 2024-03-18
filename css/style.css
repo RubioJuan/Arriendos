@@ -1,9 +1,9 @@
 body{
     background-color: rgba(50, 51, 51, 0.856);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .titulo{
     text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #181a19;
 }
 *{
@@ -32,7 +32,7 @@ body{
 }
 .logo{
     font-size: 25px;
-    color: #18C66A;
+    color: #efb810 ;
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -48,7 +48,7 @@ body{
     font-weight: bold;
 }
 .menu .navbar ul li a:hover{
-    color: #18C66A;
+    color: #efb810 ;
 }
 #menu{
     display: none;
@@ -93,16 +93,20 @@ body{
 .img4 {
     width: 300px;
     height: 300px;
+    margin: 15px;
 }
 
-/* Estilos para el contenedor de imágenes */
 .containerImg {
     text-align: center;
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
 }
+
+
 
 /* Estilos para las imágenes al hacer hover */
 .img1:hover,
@@ -112,18 +116,20 @@ body{
     transform: scale(1.05);
 }
 
-/* Media queries para hacerlo responsivo */
 @media screen and (max-width: 768px) {
     .containerImg {
-        grid-template-columns: 1fr 1fr; /* Cambiamos a dos columnas en pantallas medianas */
+        grid-template-columns: 1fr 1fr;
+        gap: 20px; /* Cambia el espacio entre imágenes en pantallas medianas */
     }
 }
 
 @media screen and (max-width: 480px) {
     .containerImg {
-        grid-template-columns: 1fr; /* Cambiamos a una sola columna en pantallas pequeñas */
+        grid-template-columns: 1fr;
+        gap: 10px; /* Cambia el espacio entre imágenes en pantallas pequeñas */
     }
 }
+
 .banner {
     display: grid;
     place-items: center;
@@ -134,4 +140,25 @@ body{
 .banner img {
     width: 100%; /* Hace que la imagen ocupe todo el ancho disponible */
     height: auto; /* Permite que la altura se ajuste automáticamente para mantener la proporción */
+}
+.logoHouse{
+	width: 55px;
+	height: auto;
+	background-color: rgba(187, 186, 183, 0.473);
+	border-radius: 80%;
+    transition: transform 0.5s ease; /* Agregamos una transición suave */
+}
+@keyframes voltear {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(180deg);
+    }
+}
+.logoHouse:hover {
+    animation: voltear 1s ease; /* La imagen girará cuando el mouse esté encima */
+}
+.texto{
+    margin: 5px
 }
