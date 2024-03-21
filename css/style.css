@@ -159,6 +159,41 @@ body{
 .logoHouse:hover {
     animation: voltear 1s ease; /* La imagen girará cuando el mouse esté encima */
 }
-.texto{
-    margin: 5px
+.subtitulo{
+    color: rgb(184, 167, 167);
+}
+.subtitulo1 {
+    color: rgb(184, 167, 167);
+}
+
+h3 {
+    color: black;
+    display: inline; /* Para que los elementos se muestren en línea y no en bloques separados */
+}
+.parrafo{
+    font-size: 20px;
+    color: #000000;
+}
+.texto {
+    margin: 5px;
+}
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.casa {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    animation: slideIn 1s ease forwards; /* Aplica la animación slideIn durante 1 segundo con un efecto ease y retención del estado final */
 }
