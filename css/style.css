@@ -6,6 +6,11 @@ body{
     text-align: center;
     color: #181a19;
 }
+.titulo1{
+    text-align: center;
+    color: #181a19;
+    font-size: 30px;
+}
 *{
     margin: 0;
     padding: 0;
@@ -159,41 +164,44 @@ body{
 .logoHouse:hover {
     animation: voltear 1s ease; /* La imagen girará cuando el mouse esté encima */
 }
-.subtitulo{
+.subtitulo {
     color: rgb(184, 167, 167);
 }
+
 .subtitulo1 {
     color: rgb(184, 167, 167);
 }
 
 h3 {
     color: black;
-    display: inline; /* Para que los elementos se muestren en línea y no en bloques separados */
-}
-.parrafo{
-    font-size: 20px;
-    color: #000000;
-}
-.texto {
-    margin: 5px;
-}
-@keyframes slideIn {
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    display: inline; 
 }
 
+.parrafo {
+    font-size: 16px; /* Tamaño de fuente reducido para dispositivos móviles */
+    color: #000000;
+}
+
+.texto {
+    margin: 15px;
+}
 .casa {
-    width: 300px;
-    height: 300px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 20px;
-    animation: slideIn 1s ease forwards; /* Aplica la animación slideIn durante 1 segundo con un efecto ease y retención del estado final */
+    max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+    height: auto; /* Permite que la altura se ajuste automáticamente para mantener la proporción de la imagen */
+    display: block; /* Elimina el espacio adicional debajo de la imagen */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+.informacion{
+    font-size: 25px;
+}
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    .parrafo {
+        font-size: 14px; /* Reducción adicional del tamaño de fuente para dispositivos más pequeños */
+    }
+
+    .casa {
+        width: 100%; /* Ajusta el ancho de la imagen al ancho del dispositivo */
+        max-width: none; /* Anula la restricción de ancho máximo */
+    }
 }
